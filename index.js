@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: ["http://localhost:3000", "https://cog-ops-website.vercel.app"],
+  origin: ["http://localhost:3000", "https://cog-ops-website-one.vercel.app/"],
   credentials: true
 }));
 
