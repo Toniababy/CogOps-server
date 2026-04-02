@@ -12,11 +12,12 @@ app.use(cors({
     "https://cog-ops-website-one.vercel.app",
     "https://cog-ops-website-one.vercel.app/"
   ],
+  credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
-app.options('*', cors());
+
+app.options('*', cors()); 
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("  CogOps DATABASE: SYNCHRONIZED"))
